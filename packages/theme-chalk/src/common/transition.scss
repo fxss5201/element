@@ -1,5 +1,5 @@
 @import "var";
-
+// 内置过渡动画
 .fade-in-linear-enter-active,
 .fade-in-linear-leave-active {
   transition: $--fade-linear-transition;

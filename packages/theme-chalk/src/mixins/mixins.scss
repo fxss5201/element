@@ -68,7 +68,7 @@
 /* BEM
  -------------------------- */
 @mixin b($block) {
-  $B: $namespace+'-'+$block !global;
+  $B: $namespace+'-'+$block !global;  // 'el'+'-'+$block !global，$namespace在mixins/config.scss文件中定义
 
   .#{$B} {
     @content;

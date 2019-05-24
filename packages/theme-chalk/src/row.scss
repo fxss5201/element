@@ -5,7 +5,7 @@
 @include b(row) {
   position: relative;
   box-sizing: border-box;
-  @include utils-clearfix;
+  @include utils-clearfix; // 定义于 mixins/utils.scss 文件中
 
   @include m(flex) {
     display: flex;
@@ -37,3 +37,48 @@
 
 }
 
+/* 上面代码编译后的结构是：
+
+.el-row {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.el-row:after, 
+.el-row:before {
+  display: table;
+  content: "";
+}
+.el-row:after {
+  clear: both;
+}
+
+.el-row--flex {
+  display: flex;
+}
+.el-row--flex:after,
+.el-row--flex:before {
+  display: none
+}
+
+.el-row.is-justify-center {
+  justify-content: center;
+}
+.el-row.is-justify-end {
+  justify-content: flex-end;
+}
+.el-row.is-justify-space-between {
+  justify-content: space-between;
+}
+.el-row.is-justify-space-around {
+  justify-content: space-around;
+}
+
+.el-row.is-align-middle {
+  align-items: center;
+}
+.el-row.is-align-bottom {
+  align-items: flex-end;
+}
+
+*/

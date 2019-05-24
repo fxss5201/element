@@ -62,9 +62,11 @@
         return (this.elFormItem || {}).elFormItemSize;
       },
       buttonSize() {
+        // 先判断本按钮是否设置 size ，然后判断 formItem 的 size ，最后再判断全局配置的 size
         return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
       },
       buttonDisabled() {
+        // 先判断本按钮是否是 disabled ，然后再判断 form 表单的 disabled
         return this.disabled || (this.elForm || {}).disabled;
       }
     },

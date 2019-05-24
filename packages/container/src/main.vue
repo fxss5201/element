@@ -21,6 +21,7 @@
         } else if (this.direction === 'horizontal') {
           return false;
         }
+        // 子元素中有 el-header 或 el-footer 时为 vertical
         return this.$slots && this.$slots.default
           ? this.$slots.default.some(vnode => {
             const tag = vnode.componentOptions && vnode.componentOptions.tag;

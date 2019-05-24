@@ -22,6 +22,7 @@ export default {
 
   computed: {
     gutter() {
+      // 循环向上查找到 ElRow ，然后获取到 ElRow 上设置的 gutter
       let parent = this.$parent;
       while (parent && parent.$options.componentName !== 'ElRow') {
         parent = parent.$parent;
@@ -34,10 +35,12 @@ export default {
     let style = {};
 
     if (this.gutter) {
+      // 如果 gutter 存在，两侧使用 padding 预留边距
       style.paddingLeft = this.gutter / 2 + 'px';
       style.paddingRight = style.paddingLeft;
     }
 
+    // 将设置的参数转换为对应的 class 
     ['span', 'offset', 'pull', 'push'].forEach(prop => {
       if (this[prop] || this[prop] === 0) {
         classList.push(
@@ -48,6 +51,7 @@ export default {
       }
     });
 
+    // 将设置的参数转换为对应的 class
     ['xs', 'sm', 'md', 'lg', 'xl'].forEach(size => {
       if (typeof this[size] === 'number') {
         classList.push(`el-col-${size}-${this[size]}`);
