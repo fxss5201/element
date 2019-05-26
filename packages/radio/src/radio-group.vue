@@ -47,12 +47,13 @@
     },
 
     created() {
+      // 监听子元素的 handleChange 事件，并对外触发 change 事件
       this.$on('handleChange', value => {
         this.$emit('change', value);
       });
     },
     mounted() {
-      // 当radioGroup没有默认选项时，第一个可以选中Tab导航
+      // 当 radioGroup 没有默认选项时，第一个可以选中 Tab 导航
       const radios = this.$el.querySelectorAll('[type=radio]');
       const firstLabel = this.$el.querySelectorAll('[role=radio]')[0];
       if (![].some.call(radios, radio => radio.checked) && firstLabel) {

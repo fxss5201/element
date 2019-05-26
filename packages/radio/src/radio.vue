@@ -76,7 +76,7 @@
       };
     },
     computed: {
-      isGroup() {
+      isGroup() { // 检查父元素是否是 radioGroup
         let parent = this.$parent;
         while (parent) {
           if (parent.$options.componentName !== 'ElRadioGroup') {

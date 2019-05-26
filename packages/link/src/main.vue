@@ -44,6 +44,7 @@ export default {
     handleClick(event) {
       if (!this.disabled) {
         if (!this.href) {
+          // 仅在可用且 href 不存在的时候，才会触发点击事件
           this.$emit('click', event);
         }
       }
