@@ -90,9 +90,11 @@
       },
       model: {
         get() {
+          // 如果父组件是 radioGroup ，则 model 返回值 radioGroup.value ，否则是 this.value
           return this.isGroup ? this._radioGroup.value : this.value;
         },
         set(val) {
+          // model的设置值：如果父组件是 radioGroup ，则触发 radioGroup 的 input 事件，否则触发 radio 的 input 事件
           if (this.isGroup) {
             this.dispatch('ElRadioGroup', 'input', [val]);
           } else {
@@ -104,12 +106,18 @@
         return (this.elFormItem || {}).elFormItemSize;
       },
       radioSize() {
+        // 关于 radio 的 size 的优先级：首先判断当前组件的父组件是否是 radioGroup
+        // 如果是的话：radioGroupSize > elFormItemSize > $ELEMENT.size
+        // 如果不是的话，也就是 radio : radioSize > elFormItemSize > $ELEMENT.size
         const temRadioSize = this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
         return this.isGroup
           ? this._radioGroup.radioGroupSize || temRadioSize
           : temRadioSize;
       },
       isDisabled() {
+        // 关于 radio 的 disabled 的优先级：首先判断当前组件的父组件是否是 radioGroup
+        // 如果是的话：radioGroup.disabled > radio.disabled > form.disabled
+        // 如果不是的话，也就是 radio : radio.disabled > form.disabled
         return this.isGroup
           ? this._radioGroup.disabled || this.disabled || (this.elForm || {}).disabled
           : this.disabled || (this.elForm || {}).disabled;
@@ -122,7 +130,9 @@
     methods: {
       handleChange() {
         this.$nextTick(() => {
+          // 触发 radio 的 change 事件
           this.$emit('change', this.model);
+          // 触发 radioGroup 的 handleChange 事件
           this.isGroup && this.dispatch('ElRadioGroup', 'handleChange', this.model);
         });
       }

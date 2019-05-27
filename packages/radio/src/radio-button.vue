@@ -64,13 +64,16 @@
     computed: {
       value: {
         get() {
+          // value 直接获取 radioGroup 的 value 值
           return this._radioGroup.value;
         },
         set(value) {
+          // 设置 value 值的时候直接触发 radioGroup 的 input 方法
           this._radioGroup.$emit('input', value);
         }
       },
       _radioGroup() {
+        // 获取最近的 radioGroup 组件
         let parent = this.$parent;
         while (parent) {
           if (parent.$options.componentName !== 'ElRadioGroup') {
@@ -82,6 +85,7 @@
         return false;
       },
       activeStyle() {
+        // 如果有设置的颜色，则使用设置的颜色，否则使用默认的 scss 设置的颜色
         return {
           backgroundColor: this._radioGroup.fill || '',
           borderColor: this._radioGroup.fill || '',
@@ -93,9 +97,11 @@
         return (this.elFormItem || {}).elFormItemSize;
       },
       size() {
+        // 关于 radioButtonSize 的优先级：radioGroupSize > elFormItemSize > $ELEMENT.size
         return this._radioGroup.radioGroupSize || this._elFormItemSize || (this.$ELEMENT || {}).size;
       },
       isDisabled() {
+        // 关于 radioButton.disabled 的优先级：radioButton.disabled > radioGroup.disabled > elForm.disabled
         return this.disabled || this._radioGroup.disabled || (this.elForm || {}).disabled;
       },
       tabIndex() {
@@ -106,6 +112,7 @@
     methods: {
       handleChange() {
         this.$nextTick(() => {
+          // 触发 radioGroup 的 handleChange 事件
           this.dispatch('ElRadioGroup', 'handleChange', this.value);
         });
       }
