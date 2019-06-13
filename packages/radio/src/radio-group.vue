@@ -65,7 +65,7 @@
     methods: {
       handleKeydown(e) { // 左右上下按键 可以在radio组内切换不同选项
         const target = e.target;
-        const className = target.nodeName === 'INPUT' ? '[type=radio]' : '[role=radio]';  // 判断事件触发的元素得出相应的值
+        const className = target.nodeName === 'INPUT' ? '[type=radio]' : '[role=radio]'; // 判断事件触发的元素得出相应的值
         const radios = this.$el.querySelectorAll(className);
         const length = radios.length;
         const index = [].indexOf.call(radios, target);

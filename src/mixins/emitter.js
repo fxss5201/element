@@ -1,7 +1,7 @@
 /**
  * 向下找到相应的组件，并由该组件去触发对应的事件
  * @param {String} componentName 组件名称
- * @param {String} eventName 事件名称 
+ * @param {String} eventName 事件名称
  * @param {Object} params 参数
  */
 function broadcast(componentName, eventName, params) {

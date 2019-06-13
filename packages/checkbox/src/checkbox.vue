@@ -180,7 +180,7 @@
           this.model = this.trueLabel || true;
         }
       },
-      handleChange(ev) { 
+      handleChange(ev) {
         if (this.isLimitExceeded) return;
         let value;
         if (ev.target.checked) {

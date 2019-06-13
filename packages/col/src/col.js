@@ -40,7 +40,7 @@ export default {
       style.paddingRight = style.paddingLeft;
     }
 
-    // 将设置的参数转换为对应的 class 
+    // 将设置的参数转换为对应的 class
     ['span', 'offset', 'pull', 'push'].forEach(prop => {
       if (this[prop] || this[prop] === 0) {
         classList.push(

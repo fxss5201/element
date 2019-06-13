@@ -1,7 +1,7 @@
 export default {
   name: 'ElRow',
 
-  componentName: 'ElRow',  // 在 ELCol 中做判断用
+  componentName: 'ElRow', // 在 ELCol 中做判断用
 
   props: {
     tag: {
