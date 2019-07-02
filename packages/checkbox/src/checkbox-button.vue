@@ -115,7 +115,7 @@
           return this.model === this.trueLabel;
         }
       },
-
+      // 其父组件或者说是父组件的父组件是否是Checkbox-group
       _checkboxGroup() {
         let parent = this.$parent;
         while (parent) {
