@@ -2,7 +2,7 @@
 
 ### npm
 
-Instalar mediante npm es la forma recomendada ya que se integra facilmente con [webpack](https://webpack.js.org/).
+Instalar mediante npm es la forma recomendada ya que se integra fácilmente con [webpack](https://webpack.js.org/).
 
 ```shell
 npm i element-ui -S
@@ -20,7 +20,7 @@ Obtenga la última versión desde [unpkg.com/element-ui](https://unpkg.com/eleme
 ```
 
 ##Tip
-Recomendamos a nuestros usuarios congelar la versión de Elemet cuando usas un CDN. Por favor, refiérase a [unpkg.com](https://unpkg.com) para más información.
+Recomendamos a nuestros usuarios congelar la versión de Element cuando usas un CDN. Por favor, refiérase a [unpkg.com](https://unpkg.com) para más información.
 
 ### Hello world
 
@@ -31,4 +31,4 @@ Si esta usando un CDN, una página con Hello-World es fácil con Element. [Onlin
   (<a href='https://codepen.io/ziyoung'>@ziyoung</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Si esta usando npm y desea combinarlo con webpack, por favor continue a la siguiente página: [Quick Start](/#/es/component/quickstart)
+Si esta usando npm y desea combinarlo con webpack, por favor continué a la siguiente página: [Quick Start](/#/es/component/quickstart)

@@ -288,7 +288,7 @@ describe('Select', () => {
       const iconClear = vm.$el.querySelector('.el-input__icon.el-icon-circle-close');
       expect(iconClear).to.exist;
       iconClear.click();
-      expect(vm.value).to.equal(null);
+      expect(vm.value).to.equal('');
       done();
     }, 100);
   });
@@ -693,7 +693,7 @@ describe('Select', () => {
       expect(spyFocus.calledOnce).to.be.true;
       expect(spyBlur.calledOnce).to.be.true;
       done();
-    }, 100);
+    }, 250);
   });
 
   it('should return focus to input inside select after option select', done => {

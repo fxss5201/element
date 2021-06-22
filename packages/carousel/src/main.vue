@@ -148,7 +148,9 @@ export default {
 
     activeIndex(val, oldVal) {
       this.resetItemPosition(oldVal);
-      this.$emit('change', val, oldVal);
+      if (oldVal > -1) {
+        this.$emit('change', val, oldVal);
+      }
     },
 
     autoplay(val) {
@@ -157,6 +159,11 @@ export default {
 
     loop() {
       this.setActiveItem(this.activeIndex);
+    },
+
+    interval() {
+      this.pauseTimer();
+      this.startTimer();
     }
   },
 

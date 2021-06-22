@@ -1,6 +1,6 @@
 ## Message
 
-Utilisé pour avoir un retour après une action particulière. La différence avec Notification est que ce-dernier est surtout utilisé pour afficher des notifications système passives.
+Utilisé pour avoir un retour après une action particulière. La différence avec Notification est que ce dernier est surtout utilisé pour afficher des notifications système passives.
 
 ### Usage
 
@@ -213,6 +213,7 @@ Dans ce cas il faudra appeler `Message(options)`. Les méthodes des différents 
 | showClose | Si un bouton de fermeture doit être affiché. | boolean | — | false |
 | center | Si le texte doit être centré. | boolean | — | false |
 | onClose | Callback de fermeture avec en paramètre l'instance de Message. | function | — | — |
+| offset | set the distance to the top of viewport | number | — | 20 |
 
 ### Méthodes
 

@@ -1,6 +1,6 @@
 ## Switch
 
-Switch es utilizdo para realizar cambios entre dos estados opuestos.
+Switch es utilizado para realizar cambios entre dos estados opuestos.
 
 ### Uso básico
 
@@ -121,8 +121,8 @@ Switch es utilizdo para realizar cambios entre dos estados opuestos.
 | value / v-model      | valor enlazado                           | boolean / string / number | —                 | —           |
 | disabled            | si Switch esta deshabilitado             | boolean                   | —                 | false       |
 | width               | ancho del componente Switch              | number                    | —                 | 40          |
-| active-icon-class   | nombre de la clase del icono mostrado en el estado `on`, sobreescribe `active-text` | string                    | —                 | —           |
-| inactive-icon-class | nombre de la clase del icono mostrado en el estado `off`, sobreescribe `inactive-text` | string                    | —                 | —           |
+| active-icon-class   | nombre de la clase del icono mostrado en el estado `on`, sobrescribe `active-text` | string                    | —                 | —           |
+| inactive-icon-class | nombre de la clase del icono mostrado en el estado `off`, sobrescribe `inactive-text` | string                    | —                 | —           |
 | active-text         | texto mostrado en el estado `on`         | string                    | —                 | —           |
 | inactive-text       | texto mostrado en el estado `off`        | string                    | —                 | —           |
 | active-value        | cambia su valor cuando se encuentra en el estado `on` | boolean / string / number | —                 | true        |
@@ -134,12 +134,12 @@ Switch es utilizdo para realizar cambios entre dos estados opuestos.
 
 ### Eventos
 
-| Nombre del evento | Descripción                       | Parametro |
+| Nombre del evento | Descripción                       | Parámetro |
 | ----------------- | --------------------------------- | --------- |
 | change            | se dispara cuando el valor cambia | valor     |
 después de cambiar
 
-### Metodos
-| Metodo | Descripción               | Parametro |
+### Métodos
+| Método | Descripción               | Parámetro |
 | ------ | ------------------------- | --------- |
 | focus  | foco al componente Switch | —         |

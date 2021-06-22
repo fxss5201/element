@@ -62,7 +62,7 @@ Además de las características nativas de img, soporte de carga perezosa, marca
 
 ### Fallo de carga
 
-:::demo Personalice el contenido cuando ocurra algun error al cargar la imagen via `slot = error`
+:::demo Personalice el contenido cuando ocurra algún error al cargar la imagen vía `slot = error`
 ```html
 <div class="demo-image__error">
   <div class="block">
@@ -110,15 +110,45 @@ Además de las características nativas de img, soporte de carga perezosa, marca
 ```
 :::
 
+### Vista previa de la imagen
+
+:::demo permitir una vista previa grande de la imagen configurando la prop `previewSrcList`.
+```html
+<div class="demo-image__preview">
+  <el-image 
+    style="width: 100px; height: 100px"
+    :src="url" 
+    :preview-src-list="srcList">
+  </el-image>
+</div>
+
+<script>
+  export default {
+    data() {
+      return {
+        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
+        srcList: [
+          'https://fuss10.elemecdn.com/8/27/f01c15bb73e1ef3793e64e6b7bbccjpeg.jpeg',
+          'https://fuss10.elemecdn.com/1/8e/aeffeb4de74e2fde4bd74fc7b4486jpeg.jpeg'
+        ]
+      }
+    }
+  }
+</script>
+```
+:::
+
 ### Atributos
 | Atributo | Descripción | Tipo | Valores aceptados | Por defecto |
 |---------- |-------- |---------- |-------------  |-------- |
 | src | origen de la imagen, igual que en nativo | string | — | - |
-| fit | Indica como la imagen debe adaptarse al contenendor, lo mismo que [object-fit](https://developer.mozilla.org/es/docs/Web/CSS/object-fit) | string | fill / contain / cover / none / scale-down | - |
+| fit | Indica como la imagen debe adaptarse al contenedor, lo mismo que [object-fit](https://developer.mozilla.org/es/docs/Web/CSS/object-fit) | string | fill / contain / cover / none / scale-down | - |
 | alt | alt nativo | string | - | - |
 | referrer-policy | referrerPolicy nativo | string | - | - |
 | lazy | si se usara lazy load | boolean | — | false |
 | scroll-container | El contenedor para añadir el scroll listener cuando se utiliza lazy load | string / HTMLElement | — | El contenedor padre más cercano cuya propiedad de desbordamiento es auto o scroll |
+| preview-src-list | permitir una vista previa grande de la imagen | Array | — | - |
+| z-index | establecer el z-index de la vista previa de la imagen | Number | — | 2000 |
 
 ### Eventos
 | Nombre del evento | Descripción | Parámetros |

@@ -186,7 +186,7 @@ Puede limpiar un Select con un icono.
 
 ### Selección múltiple básica
 
-Selección multiple utiliza tags para mostrar las opciones seleccionadas.
+Selección múltiple utiliza tags para mostrar las opciones seleccionadas.
 
 :::demo Configure el atributo `multiple` para `el-select` para habilitar el modo múltiple. En este caso, el valor del `v-model` será un array de opciones seleccionadas. De forma predeterminada, las opciones seleccionadas se mostrarán como tags. Se pueden contraer a un texto utilizando el atributo  `collapse-tags`.
 
@@ -457,7 +457,7 @@ Introduzca palabras y datos para buscar desde el servidor.
     },
     mounted() {
       this.list = this.states.map(item => {
-        return { value: item, label: item };
+        return { value: `value:${item}`, label: `label:${item}` };
       });
     },
     methods: {
@@ -541,16 +541,16 @@ Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `va
 | value-key            | nombre de clave de identidad única para el valor, necesario cuando el valor es un objeto. | string   | —                 | value            |
 | size                 | tamaño del Input                         | string   | large/small/mini  | —                |
 | clearable            | si el select puede ser limpiado | boolean  | —                 | false            |
-| multiple-limit       | maximo numero de opciones que el usuario puede seleccionar cuando `multiple` es `true`.  Sin límite cuando se fija a 0 | number   | —                 | 0                |
+| multiple-limit       | máximo numero de opciones que el usuario puede seleccionar cuando `multiple` es `true`.  Sin límite cuando se fija a 0 | number   | —                 | 0                |
 | name                 | el atributo `name` del input seleccionado | string   | —                 | —                |
 | autocomplete         | el atributo `autocomplete` del input seleccionado | string   | —         | off              |
-| auto-complete         | @DEPRECATED en la proxima major version | string   | —         | off              |
+| auto-complete         | @DEPRECATED en la proxima major versión | string   | —         | off              |
 | placeholder          | placeholder                              | string   | —                 | Select           |
 | filterable           | si Select es filtrable                   | boolean  | —                 | false            |
 | allow-create         | si esta permitido crear nuevos items. Para usar esto, `filterable` debe ser `true`. | boolean  | —                 | false            |
-| filter-method        | metodo de filtrado personalizado         | function | —                 | —                |
-| remote               | si las opciones se traeran desde el servidor | boolean  | —                 | false            |
-| remote-method        | metodo de busqueda remota personalizada  | function | —                 | —                |
+| filter-method        | método de filtrado personalizado   | function | —                 | —                |
+| remote               | si las opciones se traerán desde el servidor | boolean  | —                 | false            |
+| remote-method        | método de búsqueda remota personalizada | function | —                 | —                |
 | loading              | si Select está cargando datos del servidor | boolean  | —                 | false            |
 | loading-text         | texto mostrado durante la carga de datos del servidor, también puedes usar la configuración de slot = "empty" | string   | —                 | Loading          |
 | no-match-text        | texto mostrado cuando ningún dato coincide con la consulta de filtrado. También puedes usar la configuración de slot = "empty" | string   | —                 | No matching data |
@@ -562,17 +562,17 @@ Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `va
 | automatic-dropdown | para non-filterable Select, este `prop` decide si el menú de opciones aparece cuando la entrada está enfocada | boolean | - | false |
 
 ### Eventos Select
-| Nombre         | Descripción                              | Parametros                               |
-| -------------- | ---------------------------------------- | ---------------------------------------- |
-| change         | se dispara cuando el valor del select cambia | valor actual del select                  |
-| visible-change | se dispara cuando el menu desplegable aparece o desaparece | true cuando aparece, y false en otro caso |
-| remove-tag     | se dispara cuando un tag es removido en modo multiple | el valor del tag removido                |
-| clear          | se dispara cuando el icono se clickea en un Select limpiable | —                                        |
-| blur           | se dispara cuando el input pierde el foco | (event: Event)                           |
-| focus          | se dispara cuando el input obtiene el foco | (event: Event)                           |
+| Nombre         | Descripción                                                  | Parámetros                                |
+| -------------- | ------------------------------------------------------------ | ----------------------------------------- |
+| change         | se dispara cuando el valor del select cambia                 | valor actual del select                   |
+| visible-change | se dispara cuando el menú desplegable aparece o desaparece   | true cuando aparece, y false en otro caso |
+| remove-tag     | se dispara cuando un tag es removido en modo múltiple        | el valor del tag removido                 |
+| clear          | se dispara cuando el icono se clickea en un Select limpiable | —                                         |
+| blur           | se dispara cuando el input pierde el foco                    | (event: Event)                            |
+| focus          | se dispara cuando el input obtiene el foco                   | (event: Event)                            |
 
-### Select Slots
-| Name    | Description |
+### Slots Select 
+| Nombre | Descripción |
 |---------|-------------|
 |    —    | lista de los componentes Option |
 | prefix  | contenido prefix de un  Select |
@@ -591,8 +591,8 @@ Si el valor de encuadernación de Select es un objeto, asegúrese de asignar `va
 | label    | etiqueta de option, es igual a  `value` si se omite | string/number        | —                 | —           |
 | disabled | si  option esta deshabilitado            | boolean              | —                 | false       |
 
-### Metodos
-| Metodo | Descripción                 | Parametros |
+### Métodos
+| Método | Descripción                 | Parámetros |
 | ------ | --------------------------- | ---------- |
 | focus  | Foco en el componente input | -          |
 | blur   | Quita el focus del componente y oculta el dropdown | - |

@@ -595,7 +595,7 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 | label-position | position of label. If set to 'left' or 'right', `label-width` prop is also required | string | left / right / top | right |
 | label-width    | width of label, e.g. '50px'. All its direct child form items will inherit this value. Width `auto` is supported.        | string | — | — |
 | label-suffix | suffix of the label | string | — | — |
-| hide-required-asterisk | whether required fields should have a red asterisk (star) beside their labels | boolean | — | false |
+| hide-required-asterisk | whether to hide a red asterisk (star) next to the required field label. | boolean | — | false |
 | show-message  | whether to show the error message | boolean | — | true |
 | inline-message  | whether to display the error message inline with the form item | boolean | — | false |
 | status-icon  | whether to display an icon indicating the validation result | boolean | — | false |
@@ -608,9 +608,9 @@ All components in a Form inherit their `size` attribute from that Form. Similarl
 | Method | Description | Parameters |
 | ---- | ---- | ---- |
 | validate | validate the whole form. Takes a callback as a param. After validation, the callback will be executed with two params: a boolean indicating if the validation has passed, and an object containing all fields that fail the validation. Returns a promise if callback is omitted | Function(callback: Function(boolean, object)) |
-| validateField | validate one or several form items | Function(props: string | array, callback: Function(errorMessage: string)) |
+| validateField | validate one or several form items | Function(props: string \| array, callback: Function(errorMessage: string)) |
 | resetFields | reset all the fields and remove validation result | — |
-| clearValidate | clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared | Function(props: string | array) |
+| clearValidate | clear validation message for certain fields. The parameter is prop name or an array of prop names of the form items whose validation messages will be removed. When omitted, all fields' validation messages will be cleared | Function(props: string \| array) |
 
 ### Form Events
 | Event Name | Description | Parameters |

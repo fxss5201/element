@@ -35,13 +35,13 @@ export default {
       month12: 'Prosinac',
       week: 'tjedan',
       weeks: {
-        sun: 'Pon',
-        mon: 'Uto',
-        tue: 'Sri',
-        wed: 'Čet',
-        thu: 'Pet',
-        fri: 'Sub',
-        sat: 'Ned'
+        sun: 'Ned',
+        mon: 'Pon',
+        tue: 'Uto',
+        wed: 'Sri',
+        thu: 'Čet',
+        fri: 'Pet',
+        sat: 'Sub'
       },
       months: {
         jan: 'Jan',
@@ -67,7 +67,8 @@ export default {
     cascader: {
       noMatch: 'Nema pronađenih podataka',
       loading: 'Učitavanje',
-      placeholder: 'Izaberi'
+      placeholder: 'Izaberi',
+      noData: 'Nema podataka'
     },
     pagination: {
       goto: 'Idi na',
@@ -107,6 +108,16 @@ export default {
     },
     image: {
       error: 'FAILED' // to be translated
+    },
+    pageHeader: {
+      title: 'Back' // to be translated
+    },
+    popconfirm: {
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
+    },
+    empty: {
+      description: 'Nema podataka'
     }
   }
 };

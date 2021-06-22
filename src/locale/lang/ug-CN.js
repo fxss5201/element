@@ -67,7 +67,8 @@ export default {
     cascader: {
       noMatch: 'ئۇچۇر تېپىلمىدى',
       loading: 'يۈكلىنىۋاتىدۇ',
-      placeholder: 'تاللاڭ'
+      placeholder: 'تاللاڭ',
+      noData: 'ئۇچۇر يوق'
     },
     pagination: {
       goto: 'كىيىنكى بەت',
@@ -106,7 +107,17 @@ export default {
       hasCheckedFormat: 'تاللانغىنى {checked}/{total} تۈر'
     },
     image: {
-      error: 'FAILED' // to be translated
+      error: 'مەغلۇب بولدى'
+    },
+    pageHeader: {
+      title: 'قايتىش'
+    },
+    popconfirm: {
+      confirmButtonText: 'ھەئە',
+      cancelButtonText: 'ياق'
+    },
+    empty: {
+      description: 'ئۇچۇر يوق'
     }
   }
 };

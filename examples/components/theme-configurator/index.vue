@@ -10,7 +10,6 @@
       @select="onSelectChange"
     ></action-panel>
     <main-panel
-      ref='configuratorMain'
       v-if="defaultConfig"
       :currentConfig="currentConfig"
       :defaultConfig="defaultConfig"
@@ -49,6 +48,7 @@ import {
 export default {
   props: {
     themeConfig: Object,
+    previewConfig: Object,
     isOfficial: Boolean,
     onUserConfigUpdate: Function
   },
@@ -102,7 +102,7 @@ export default {
             defaultConfig = res;
           })
           .catch(err => {
-            this.onError(err);
+            this.onError && this.onError(err);
           })
           .then(() => {
             setTimeout(() => {
@@ -156,7 +156,7 @@ export default {
       this.onAction();
     },
     onDownload() {
-      bus.$emit(ACTION_DOWNLOAD_THEME, this.userConfig);
+      bus.$emit(ACTION_DOWNLOAD_THEME, this.userConfig, this.previewConfig.name);
     },
     onAction() {
       this.onUserConfigUpdate(this.userConfig);
@@ -180,7 +180,6 @@ export default {
       bus.$emit(ACTION_COMPONECT_SELECT, val);
       this.selectedComponent = val;
       this.filterCurrentConfig();
-      this.$refs.configuratorMain.focus();
     }
   },
   watch: {

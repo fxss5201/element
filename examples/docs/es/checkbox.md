@@ -51,9 +51,9 @@ Estado deshabilitado para el checkbox.
 
 ### Grupo de Checkboxes
 
-Es usado por multiples checkboxes los cuales están enlazados a un grupo, indica si una opción está seleccionada verificando si esta está marcada.
+Es usado por múltiples checkboxes los cuales están enlazados a un grupo, indica si una opción está seleccionada verificando si esta está marcada.
 
-:::demo El elemento `checkbox-group` puede manejar multiples checkboxes en un grupo usando `v-model` el cuál está enlazado a un `Array`. Dentro del elemento `el-checkbox`, `label` es el valor del checkbox. Si en ese tag no hay contenido anidado, `label` va a ser mostrado como la descripción al lado del botón del checkbox. `label` también se corresponde con los valores del array. Es seleccionado si el valor especificado existe en el array y viceversa.
+:::demo El elemento `checkbox-group` puede manejar múltiples checkboxes en un grupo usando `v-model` el cuál está enlazado a un `Array`. Dentro del elemento `el-checkbox`, `label` es el valor del checkbox. Si en ese tag no hay contenido anidado, `label` va a ser mostrado como la descripción al lado del botón del checkbox. `label` también se corresponde con los valores del array. Es seleccionado si el valor especificado existe en el array y viceversa.
 
 ```html
 <template>
@@ -248,13 +248,13 @@ Checkbox con estilo tipo Botón.
 | disabled      | especifica si el Checkbox está deshabilitado | boolean                   | —                     | false       |
 | border        | especifica si agrega un borde alrededor del Checkbox | boolean                   | —                     | false       |
 | size          | tamaño del Checkbox, sólo funciona si `border` es true | string                    | medium / small / mini | —           |
-| name          | atributo 'name' nativo                   | string                    | —                     | —           |
+| name          | atributo `name` nativo                 | string                    | —                     | —           |
 | checked       | especifica si el Checkbox está marcado   | boolean                   | —                     | false       |
 | indeterminate | similar a `indeterminate` en el checkbox nativo | boolean                   | —                     | false       |
 
 ### Eventos de Checkbox
-| Nombre | Descripción                              | Parametros           |
-| ------ | ---------------------------------------- | -------------------- |
+| Nombre | Descripción                                | Parámetros           |
+| ------ | ------------------------------------------ | -------------------- |
 | change | se ejecuta cuando el valor enlazado cambia | el valor actualizado |
 
 ### Atributos de Checkbox-group
@@ -269,8 +269,8 @@ Checkbox con estilo tipo Botón.
 | fill       | color de border y de fondo cuando el botón está activo | string  | —                     | #409EFF     |
 
 ### Eventos de Checkbox-group
-| Nombre de Evento | Descripción                              | Parametros           |
-| ---------------- | ---------------------------------------- | -------------------- |
+| Nombre de Evento | Descripción                                | Parámetros           |
+| ---------------- | ------------------------------------------ | -------------------- |
 | change           | se ejecuta cuando el valor enlazado cambia | el valor actualizado |
 
 ### Atributos de Checkbox-button

@@ -67,7 +67,8 @@ export default {
     cascader: {
       noMatch: 'Brak dopasowań',
       loading: 'Ładowanie',
-      placeholder: 'Wybierz'
+      placeholder: 'Wybierz',
+      noData: 'Brak danych'
     },
     pagination: {
       goto: 'Idź do',
@@ -107,6 +108,16 @@ export default {
     },
     image: {
       error: 'FAILED' // to be translated
+    },
+    pageHeader: {
+      title: 'Back' // to be translated
+    },
+    popconfirm: {
+      confirmButtonText: 'Yes', // to be translated
+      cancelButtonText: 'No' // to be translated
+    },
+    empty: {
+      description: 'Brak danych'
     }
   }
 };

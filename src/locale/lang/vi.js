@@ -67,7 +67,8 @@ export default {
     cascader: {
       noMatch: 'Dữ liệu không phù hợp',
       loading: 'Đang tải',
-      placeholder: 'Chọn'
+      placeholder: 'Chọn',
+      noData: 'Không tìm thấy dữ liệu'
     },
     pagination: {
       goto: 'Nhảy tới',
@@ -106,7 +107,17 @@ export default {
       hasCheckedFormat: '{checked}/{total} đã chọn '
     },
     image: {
-      error: 'FAILED' // to be translated
+      error: 'LỖI'
+    },
+    pageHeader: {
+      title: 'Quay lại'
+    },
+    popconfirm: {
+      confirmButtonText: 'Ok',
+      cancelButtonText: 'Huỷ'
+    },
+    empty: {
+      description: 'Không có dữ liệu'
     }
   }
 };

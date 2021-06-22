@@ -1,7 +1,7 @@
 export default {
   el: {
     colorpicker: {
-      confirm: 'OK',
+      confirm: 'Обрати',
       clear: 'Очистити'
     },
     datepicker: {
@@ -67,7 +67,8 @@ export default {
     cascader: {
       noMatch: 'Співпадінь не знайдено',
       loading: 'Завантаження',
-      placeholder: 'Обрати'
+      placeholder: 'Обрати',
+      noData: 'Немає даних'
     },
     pagination: {
       goto: 'Перейти',
@@ -106,7 +107,17 @@ export default {
       hasCheckedFormat: '{checked}/{total} вибрано'
     },
     image: {
-      error: 'FAILED' // to be translated
+      error: 'ПОМИЛКА'
+    },
+    pageHeader: {
+      title: 'Назад'
+    },
+    popconfirm: {
+      confirmButtonText: 'Так',
+      cancelButtonText: 'Ні'
+    },
+    empty: {
+      description: 'Немає даних'
     }
   }
 };
